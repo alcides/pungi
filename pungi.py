@@ -36,18 +36,13 @@ To Do:
 		
 		
 		
-© 2007 - Alcides Fonseca. All Rights Reserved.
+Â© 2007 - Alcides Fonseca. All Rights Reserved.
 """
 
 # Built-in Imports
 import sys
 import os
 
-# Check if it's not running from the console.
-#if 'SCRIPT_NAME' not in os.environ:
-#	print 'This is a web script.\n Visit http://pungi.sourceforge.net for more details. '
-#	raw_input()
-#	sys.exit()
 
 # General Imports
 import re
@@ -939,26 +934,8 @@ class RSSgenerator:
 				<title>"""+cgi.escape(str(row[self.col_title]))+"""</title>
 				<link>"""+cgi.escape(str(self.link_base) + str(row[self.field]))+"""</link>
 				<pubDate>"""+self.format_date(row[self.time])+"""</pubDate>
-			<description>"""+cgi.escape(str(row[self.col_desc]))+"""			
-			
-			&lt;br/&gt;
-			&lt;script type=&quot;text/javascript&quot;&gt;&lt;!--
-				google_ad_client = &quot;pub-1411256716541452&quot;;
-				google_ad_width = 468;
-				google_ad_height = 15;
-				google_ad_format = &quot;468x15_0ads_al&quot;;
-				google_ad_channel = &quot;&quot;;
-				google_color_border = &quot;FFFFFF&quot;;
-				google_color_bg = &quot;FFFFFF&quot;;
-				google_color_link = &quot;2D8930&quot;;
-				google_color_text = &quot;000000&quot;;
-				google_color_url = &quot;008000&quot;;
-				//--&gt;
-			&lt;/script&gt;
-			&lt;script type=&quot;text/javascript&quot;
-				src=&quot;http://pagead2.googlesyndication.com/pagead/show_ads.js&quot;&gt;
-			&lt;/script&gt;
-			""" + """</description></item>"""
+				<description>"""+cgi.escape(str(row[self.col_desc]))+"""</description>
+			</item>"""
 			
 		self.output += """</channel></rss>"""
 		
